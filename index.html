@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Overcharge Protection System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#home" class="logo">SmartOvercharge</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Protect Your Device with <span class="text-gradient">Intelligence</span></h1>
+            <p class="hero-subtitle">The next generation of battery management. Say goodbye to overcharging and hello to
+                longevity.</p>
+            <div class="hero-btns">
+                <a href="#demo" class="btn-green">Try Live Demo</a>
+                <a href="#about" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="C:/Users/pavan/.gemini/antigravity/brain/abcbe943-0969-430c-bb1a-bb6fa15de3f2/hero_battery_protection_png_1774279288194.png"
+                alt="Hero Battery Protection">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="section-title heading-blue">Our Smart Features</h2>
+        <div class="services-grid">
+            <div class="service-card glass">
+                <img src="C:/Users/pavan/.gemini/antigravity/brain/abcbe943-0969-430c-bb1a-bb6fa15de3f2/service_monitoring_png_1774279328428.png"
+                    alt="Monitoring">
+                <h3>Real-time Monitoring</h3>
+                <p>Advanced sensors track every milliampere, ensuring precise data flow analysis.</p>
+            </div>
+            <div class="service-card glass">
+                <img src="C:/Users/pavan/.gemini/antigravity/brain/abcbe943-0969-430c-bb1a-bb6fa15de3f2/service_safeguard_png_1774279391592.png"
+                    alt="Safeguard">
+                <h3>Automatic Disconnect</h3>
+                <p>Smart protocols instantly cut power once your battery reaches its optimal charge peak.</p>
+            </div>
+            <div class="service-card glass">
+                <img src="C:/Users/pavan/.gemini/antigravity/brain/abcbe943-0969-430c-bb1a-bb6fa15de3f2/service_longevity_png_1774279567269.png"
+                    alt="Longevity">
+                <h3>Battery Longevity</h3>
+                <p>Extend the lifespan of your lithium-ion cells by up to 50% with healthy charging cycles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-container">
+        <div class="about-card glass">
+            <h2 class="heading-blue">About the Project</h2>
+            <div class="about-content">
+                <h3>The Problem: Overcharging</h3>
+                <p>Overcharging occurs when a device remains plugged in after reaching 100%. This generates excess heat,
+                    degrades lithium-ion battery chemistry, and shortens the overall lifespan of your expensive gadgets.
+                </p>
+
+                <h3>The Solution: Smart Protection</h3>
+                <p>The Smart Overcharge Protection System monitors battery health and charging cycles in real-time. It
+                    automatically disconnects the power flow when the optimal charge levels are reached, ensuring your
+                    battery stays "Green" for years to come.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section (Integrated Login/Dashboard) -->
+    <section id="demo" class="demo-section">
+        <h2 class="section-title heading-blue">Interactive Demo</h2>
+        <!-- Login Section -->
+        <div id="login-section" class="card-container demo-card">
+            <div class="card glass">
+                <h2 class="heading-blue">Set Your Reminder</h2>
+                <div class="input-group">
+                    <input type="text" id="user-name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label style="display: block; text-align: left; margin-bottom: 10px; color: #cbd5e1;">Reminder Time
+                        (minutes):</label>
+                    <input type="number" id="reminder-time" value="10" min="1"
+                        style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.05); color: white; outline: none;">
+                </div>
+                <button id="start-btn" class="btn-green">Start Monitoring</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-section" class="card-container hidden demo-card">
+            <div class="card glass">
+                <h2 class="heading-blue">Welcome, <span id="display-name">User</span>!</h2>
+                <div class="status-indicator">
+                    <div class="battery-container">
+                        <div id="battery-level" class="battery-level"></div>
+                    </div>
+                    <p id="battery-status">Status: Charging Safely</p>
+                </div>
+
+                <div class="timer-display">
+                    <h3>Remaining Time</h3>
+                    <div id="countdown" class="countdown">00:10</div>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-btn" class="btn-red">Stop Charging</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card glass">
+            <h2 class="heading-blue">Contact Us</h2>
+            <p>Have questions? Reach out to our technical team.</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4"></textarea>
+                <button type="submit" class="btn-green">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Smart Overcharge Protection System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Alert Overlay -->
+    <div id="alert-popup" class="alert-overlay hidden">
+        <div class="alert-box card glass">
+            <div class="alert-icon">⚠️</div>
+            <h2>Charging Alert!</h2>
+            <p><strong>Warning:</strong> Charging time exceeded!</p>
+            <button id="close-alert" class="btn-green">Dismiss</button>
+        </div>
+    </div>
+
+    <!-- Hidden Audio for Bell -->
+    <audio id="bell-sound" loop>
+        <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
