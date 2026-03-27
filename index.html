@@ -4,161 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Overcharge Protection System</title>
+    <title>Smart Overcharge Protection | Intelligent Battery Management</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="background-gradient"></div>
-
     <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="nav-container">
-            <a href="#home" class="logo">SmartOvercharge</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <nav class="navbar">
+        <a href="#home" class="logo">SmartOvercharge</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Features</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-btns">
+            <a href="#" class="btn-signup" id="open-signup">Sign Up</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Protect Your Device with <span class="text-gradient">Intelligence</span></h1>
-            <p class="hero-subtitle">The next generation of battery management. Say goodbye to overcharging and hello to
-                longevity.</p>
-            <div class="hero-btns">
-                <a href="#demo" class="btn-green">Try Live Demo</a>
-                <a href="#about" class="btn-outline">Learn More</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/hero.png"
-                alt="Hero Battery Protection">
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h2 class="section-title heading-blue">Our Smart Features</h2>
-        <div class="services-grid">
-            <div class="service-card glass">
-                <img src="images/monitoring.png"
-                    alt="Monitoring">
-                <h3>Real-time Monitoring</h3>
-                <p>Advanced sensors track every milliampere, ensuring precise data flow analysis.</p>
-            </div>
-            <div class="service-card glass">
-                <img src="images/safeguard.png"
-                    alt="Safeguard">
-                <h3>Automatic Disconnect</h3>
-                <p>Smart protocols instantly cut power once your battery reaches its optimal charge peak.</p>
-            </div>
-            <div class="service-card glass">
-                <img src="images/longevity.png"
-                    alt="Longevity">
-                <h3>Battery Longevity</h3>
-                <p>Extend the lifespan of your lithium-ion cells by up to 50% with healthy charging cycles.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-container">
-        <div class="about-card glass">
-            <h2 class="heading-blue">About the Project</h2>
-            <div class="about-content">
-                <h3>The Problem: Overcharging</h3>
-                <p>Overcharging occurs when a device remains plugged in after reaching 100%. This generates excess heat,
-                    degrades lithium-ion battery chemistry, and shortens the overall lifespan of your expensive gadgets.
-                </p>
-
-                <h3>The Solution: Smart Protection</h3>
-                <p>The Smart Overcharge Protection System monitors battery health and charging cycles in real-time. It
-                    automatically disconnects the power flow when the optimal charge levels are reached, ensuring your
-                    battery stays "Green" for years to come.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Section (Integrated Login/Dashboard) -->
-    <section id="demo" class="demo-section">
-        <h2 class="section-title heading-blue">Interactive Demo</h2>
-        <!-- Login Section -->
-        <div id="login-section" class="card-container demo-card">
-            <div class="card glass">
-                <h2 class="heading-blue">Set Your Reminder</h2>
-                <div class="input-group">
-                    <input type="text" id="user-name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-group">
-                    <label style="display: block; text-align: left; margin-bottom: 10px; color: #cbd5e1;">Reminder Time
-                        (minutes):</label>
-                    <input type="number" id="reminder-time" value="10" min="1"
-                        style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.05); color: white; outline: none;">
-                </div>
-                <button id="start-btn" class="btn-green">Start Monitoring</button>
-            </div>
-        </div>
-
-        <!-- Dashboard Section -->
-        <div id="dashboard-section" class="card-container hidden demo-card">
-            <div class="card glass">
-                <h2 class="heading-blue">Welcome, <span id="display-name">User</span>!</h2>
-                <div class="status-indicator">
-                    <div class="battery-container">
-                        <div id="battery-level" class="battery-level"></div>
+    <!-- Hero Section (3-Row Layout) -->
+    <section id="home" class="hero-section active">
+        <div class="page-content">
+            <div class="hero-wrapper">
+                <!-- Row 1: Centered Title -->
+                <h1 class="hero-title">Protect Your Devices with <span class="text-gradient">Intelligence</span></h1>
+                
+                <!-- Row 2: Split Subtitle and Image -->
+                <div class="hero-split">
+                    <div class="hero-left">
+                        <p class="hero-subtitle">The next generation of battery management. Extend lifespan and ensure safety with our smart overcharge protection system.</p>
                     </div>
-                    <p id="battery-status">Status: Charging Safely</p>
+                    <div class="hero-right">
+                        <img src="images/hero.png" alt="Smart Battery Protection">
+                    </div>
                 </div>
 
-                <div class="timer-display">
-                    <h3>Remaining Time</h3>
-                    <div id="countdown" class="countdown">00:10</div>
-                </div>
-
-                <div class="controls">
-                    <button id="stop-btn" class="btn-red">Stop Charging</button>
+                <!-- Row 3: Centered Buttons -->
+                <div class="hero-footer-btns">
+                    <a href="#demo" class="btn-primary">Try Live Demo</a>
+                    <a href="#services" class="btn-primary" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">Explore Features</a>
                 </div>
             </div>
+            
+            <div class="section-footer">&copy; 2026 Smart Overcharge Protection</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services">
+        <div class="page-content">
+            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 60px; font-weight: 800;">Smart <span class="text-gradient">Features</span></h2>
+            <div class="services-grid">
+                <div class="service-card glass">
+                    <img src="images/monitoring.png" alt="Monitoring" style="width: 80px; height: 80px; margin-bottom: 25px;">
+                    <h3>Real-time Monitoring</h3>
+                    <p>Advanced sensors track every milliampere of power flow with extreme precision.</p>
+                </div>
+                <div class="service-card glass">
+                    <img src="images/safeguard.png" alt="Safeguard" style="width: 80px; height: 80px; margin-bottom: 25px;">
+                    <h3>Auto Disconnect</h3>
+                    <p>Smart protocols instantly cut power once your battery reaches its optimal charge peak.</p>
+                </div>
+                <div class="service-card glass">
+                    <img src="images/longevity.png" alt="Longevity" style="width: 80px; height: 80px; margin-bottom: 25px;">
+                    <h3>Battery Longevity</h3>
+                    <p>Extend the lifespan of your lithium-ion cells by up to 50% through healthy charging cycles.</p>
+                </div>
+            </div>
+            <div class="section-footer">&copy; 2026 Smart Overcharge Protection</div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo">
+        <div class="page-content" style="max-width: 800px;">
+            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 60px; font-weight: 800;">Interactive <span class="text-gradient">Dashboard</span></h2>
+            
+            <div id="demo-entry" style="display: flex; justify-content: center; width: 100%;">
+                <div class="glass" style="padding: 40px; max-width: 450px; text-align: center; width: 100%;">
+                    <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Configuration</h3>
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" id="demo-name" placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label>Set Timer (minutes)</label>
+                        <input type="number" id="reminder-time" value="1" min="1" max="60">
+                    </div>
+                    <button id="start-demo" class="btn-primary" style="width: 100%;">Start Simulation</button>
+                </div>
+            </div>
+
+            <div id="demo-dashboard" class="hidden" style="max-width: 500px; margin: 0 auto;">
+                <div class="glass" style="padding: 40px; text-align: center;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Welcome, <span id="user-display-name" class="text-gradient">User</span></h3>
+                    <div class="battery-container">
+                        <div id="battery-fill" class="battery-level"></div>
+                    </div>
+                    <p id="charge-status" style="font-weight: 600; margin-bottom: 15px; font-size: 1.1rem; color: var(--accent-emerald);">Status: Optimized Charging</p>
+                    <div style="font-size: 3rem; font-weight: 800; margin-bottom: 10px;" id="charge-percentage">15%</div>
+                    <div id="countdown" style="font-size: 2rem; font-weight: 700; color: var(--text-dim); margin-bottom: 30px;">01:00</div>
+                    <button id="stop-demo" class="btn-primary" style="background: var(--danger-rose); width: 100%;">Stop Session</button>
+                </div>
+            </div>
+            <div class="section-footer">&copy; 2026 Smart Overcharge Protection</div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-card glass">
-            <h2 class="heading-blue">Contact Us</h2>
-            <p>Have questions? Reach out to our technical team.</p>
-            <form class="contact-form">
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="4"></textarea>
-                <button type="submit" class="btn-green">Send Message</button>
-            </form>
+    <section id="contact">
+        <div class="page-content">
+            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 60px; font-weight: 800;">Get <span class="text-gradient">In Touch</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
+                <div class="contact-info">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Support Team</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 30px; font-size: 1.1rem;">Our technical team is here to help you protect your hardware assets. Reach out anytime.</p>
+                    <div class="glass" style="padding: 20px; font-weight: 600;">📧 support@smartovercharge.io</div>
+                </div>
+                <div class="glass" style="padding: 40px;">
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="How can we help?" id="contact-message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-footer">&copy; 2026 Smart Overcharge Protection</div>
         </div>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Smart Overcharge Protection System. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Alert Overlay -->
-    <div id="alert-popup" class="alert-overlay hidden">
-        <div class="alert-box card glass">
-            <div class="alert-icon">⚠️</div>
-            <h2>Charging Alert!</h2>
-            <p><strong>Warning:</strong> Charging time exceeded!</p>
-            <button id="close-alert" class="btn-green">Dismiss</button>
+    <!-- Auth Overlay -->
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-card glass">
+            <span class="close-auth" id="close-auth">&times;</span>
+            <h2 id="auth-title" style="font-size: 2rem; margin-bottom: 10px;">Create Account</h2>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">Join thousands protecting their devices.</p>
+            <form id="auth-form">
+                <div class="input-group" id="name-group">
+                    <label>Full Name</label>
+                    <input type="text" id="auth-name" placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="auth-email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="auth-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" id="auth-submit" class="btn-primary" style="width: 100%;">Sign Up</button>
+            </form>
+            <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+                <span id="toggle-text">Already have an account?</span> <a href="#" id="toggle-auth" style="color: var(--primary-blue); text-decoration: none; font-weight: 600;">Sign In</a>
+            </p>
         </div>
     </div>
 
-    <!-- Hidden Audio for Bell -->
+    <!-- Alert Popup -->
+    <div id="alert-popup" class="auth-overlay">
+        <div class="auth-card glass" style="text-align: center; border-color: var(--danger-rose);">
+            <div style="font-size: 4rem; margin-bottom: 25px;">🛡️</div>
+            <h2 style="color: var(--danger-rose); font-size: 2rem; margin-bottom: 10px;">Safety Intercept!</h2>
+            <p style="font-size: 1.1rem;">Target charge reached. Power flow has been disconnected to preserve battery health.</p>
+            <button id="close-alert" class="btn-primary" style="margin-top: 30px; width: 100%;">Dismiss Alert</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Message sent successfully! 🚀</div>
+
+    <!-- Alarm Sound -->
     <audio id="bell-sound" loop>
         <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
     </audio>
