@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.navbar');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a, .hero-btns a, .hero-footer-btns a');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinksList = document.querySelector('.nav-links');
     const authOverlay = document.getElementById('auth-overlay');
     const openSignupBtn = document.getElementById('open-signup');
     const closeAuthBtn = document.getElementById('close-auth');
@@ -69,9 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 switchPage(href);
+                
+                // Close mobile menu if open
+                if (menuToggle) {
+                    menuToggle.classList.remove('active');
+                    navLinksList.classList.remove('active');
+                }
             }
         });
     });
+
+    // Mobile Menu Toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinksList.classList.toggle('active');
+        });
+    }
 
     // --- Authentication UI Update ---
     const updateAuthUI = () => {
